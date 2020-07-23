@@ -1,3 +1,7 @@
+
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
 /**********************
  * MAKE DINO FUNCTION *
  **********************/
@@ -25,6 +29,7 @@ const makeDino = function (species, period, carnivore, extinct) {
 /**************************
  * MAKE SINGULAR FUNCTION *
  **************************/
+
 //    given a dinosaur object
 //    returns a new dinosaur object
 //    with 'us' ending suffix removed
@@ -52,16 +57,37 @@ const makeSingular = function (dinosaurObject) {
   else {
     dinosaurObjectCopy.species = species
   }
-  
+
   return dinosaurObjectCopy
 }
 
 //---------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------//
 
+/*****************************
+ * TRUNCATE SPECIES FUNCTION *
+ *****************************/
 
-const truncateSpecies = function () {
+
+const truncateSpecies = function (dinoObject) {
+  let newTruncatedDinosaur = {}
+  newTruncatedDinosaur.species = dinoObject.species
+  newTruncatedDinosaur.period = dinoObject.period
+  newTruncatedDinosaur.carnivore = dinoObject.carnivore
+  newTruncatedDinosaur.extinct = dinoObject.extinct
+
+  console.log(newTruncatedDinosaur)
+
+  
+
 }
+
+
+
+//---------------------------------------------------------------------------------------//
+//---------------------------------------------------------------------------------------//
+
+
 
 const makeExtinct = function () {
 
