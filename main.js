@@ -3,19 +3,19 @@
  **********************/
 
 const makeDino = function (species, period, carnivore, extinct) {
-    const dino = {}
-    dino.species = species;
-    dino.period = period;
-    dino.carnivore = carnivore;
-    
-    if (extinct === undefined){
-      dino.extinct = false;
-    }
-    else{
-    dino.extinct = extinct;
-    };
+  const dino = {}
+  dino.species = species;
+  dino.period = period;
+  dino.carnivore = carnivore;
 
-    return dino
+  if (extinct === undefined) {
+    dino.extinct = false;
+  }
+  else {
+    dino.extinct = extinct;
+  };
+
+  return dino
 }
 
 //---------------------------------------------------------------------------------------//
@@ -33,23 +33,29 @@ const makeSingular = function (dinosaurObject) {
   //if the last 2 characters are equal to 'us'
   //.slice()
   //.splice()
-  let species = dinosaurObject.species
-  // console.log(species)
+  
+  let dinosaurObjectCopy = {}
+
+  dinosaurObjectCopy.species = dinosaurObject.species
+  dinosaurObjectCopy.period = dinosaurObject.period
+  dinosaurObjectCopy.carnivore = dinosaurObject.carnivore
+  dinosaurObjectCopy.extinct = dinosaurObject.extinct
+
+  let species = dinosaurObjectCopy.species
   const last2Characters = species.slice(species.length - 2)
-  // console.log(species)
   let result = species.slice(0, species.length - 2)
+
   if (last2Characters === 'us') {
-
-    // console.log(result)
-    return result
-    // }
-    // else {
-    //   return species
-    // }
-    // console.log(last2Characters)
-
+    dinosaurObjectCopy.species = result
   }
+
+  else {
+    dinosaurObjectCopy.species = species
+  }
+  
+  return dinosaurObjectCopy
 }
+
 //---------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------//
 
