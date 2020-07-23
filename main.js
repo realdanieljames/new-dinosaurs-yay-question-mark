@@ -94,7 +94,7 @@ const truncateSpecies = function (dinoObject) {
 
 
 const makeExtinct = function (dinosaur) {
-
+  return makeDino(dinosaur.species, dinosaur.period, dinosaur.carnivore, true)
 
 }
 
