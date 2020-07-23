@@ -76,7 +76,11 @@ const truncateSpecies = function (dinoObject) {
   newTruncatedDinosaur.carnivore = dinoObject.carnivore
   newTruncatedDinosaur.extinct = dinoObject.extinct
 
-  console.log(newTruncatedDinosaur)
+  if (newTruncatedDinosaur.species.length >= 10) {
+    newTruncatedDinosaur.species = newTruncatedDinosaur.species.slice(0,7) + '...';
+  }
+
+  return newTruncatedDinosaur;
 
   
 
@@ -89,7 +93,8 @@ const truncateSpecies = function (dinoObject) {
 
 
 
-const makeExtinct = function () {
+const makeExtinct = function (dinosaur) {
+
 
 }
 
